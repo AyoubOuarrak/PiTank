@@ -16,10 +16,30 @@ The PiTank is a small RC car with a Raspberry Pi for a brain. It is controlled o
 
 ###Install Raspbian Debian Wheezy 
 http://www.raspberrypi.org/documentation/installation/installing-images/README.md
+
+###Install Apache2/php5/Postgresql
+- sudo apt-get install apache2
+- sudo apt-get install php5 libapache2-mod-php5
+- sudo apt-get install postgresql
+- sudo apt-get install php5-pgsql
+
+###Configure Postgresql
+- sudo -u postgres createuser pi
+- sudo -u postgres createdb pi
+
+###Connecting to the PostgreSQL database from Python
+sudo apt-get install python-psycopg2D
+
 ###Turn the Raspberry Pi into a WiFi router
 http://andypi.co.uk/?page_id=220
-###Install DHCP server
+
+###Install the DHCP server
 https://learn.adafruit.com/setting-up-a-raspberry-pi-as-a-wifi-access-point/install-software
+
+###Install MJPG-Streamer
+http://blog.miguelgrinberg.com/post/how-to-build-and-run-mjpg-streamer-on-the-raspberry-pi
+
+
 
 
 
