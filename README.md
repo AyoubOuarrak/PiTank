@@ -41,8 +41,8 @@ http://blog.miguelgrinberg.com/post/how-to-build-and-run-mjpg-streamer-on-the-ra
 
 #Configuration
 Copy the files in the conf directory into the raspberry pi, in these directory:
-
-/etc/network/interface
-/etc/dhcp/dhcpd.conf
-/etc/hostapd/hostapd.conf
+  
+/etc/network/interface  
+/etc/dhcp/dhcpd.conf  
+/etc/hostapd/hostapd.conf  
  
