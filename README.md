@@ -40,6 +40,9 @@ https://learn.adafruit.com/setting-up-a-raspberry-pi-as-a-wifi-access-point/inst
 http://blog.miguelgrinberg.com/post/how-to-build-and-run-mjpg-streamer-on-the-raspberry-pi
 
 #Configuration
-Copy the files in the conf directory into the raspberry pi, in these directory:  
+Copy the files in the conf directory into the raspberry pi, in these directory:
+
 /etc/network/interface
+/etc/dhcp/dhcpd.conf
+/etc/hostapd/hostapd.conf
  
