@@ -13,8 +13,13 @@ The PiTank is a small RC car with a Raspberry Pi for a brain. It is controlled o
 - DS18B20 temperature sensor
 
 #Preparing raspberry pi
+
 ###Install Raspbian Debian Wheezy 
-image installation guides: http://www.raspberrypi.org/documentation/installation/installing-images/README.md
+http://www.raspberrypi.org/documentation/installation/installing-images/README.md
+###Turn the Raspberry Pi into a WiFi router
+http://andypi.co.uk/?page_id=220
+###Install DHCP server
+https://learn.adafruit.com/setting-up-a-raspberry-pi-as-a-wifi-access-point/install-software
 
 
 
