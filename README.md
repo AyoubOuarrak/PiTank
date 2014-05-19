@@ -1,5 +1,5 @@
 #PiTank
-The PiTank is a small RC car with a Raspberry Pi for a brain. It is controlled over a Wi-Fi network through a TCP/IP socket, and streams back live video from an on-board webcam. The PiTank gets power from 12V battery and a switching voltage regulator for a steady five volts. 
+The PiTank is a small RC car with a Raspberry Pi for a brain. It is controlled over a Wi-Fi network through socket.io and node.js, and streams back live video from an on-board webcam. The PiTank gets power from 12V battery and a switching voltage regulator for a steady five volts. 
 
 #What you need
 - Raspberry pi
