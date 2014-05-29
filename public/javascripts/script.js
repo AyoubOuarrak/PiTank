@@ -3,8 +3,12 @@ $(function () {
    var socket = io.connect(),
     wIsDown = false,
     aIsDown = false,
+    bIsDown = false,
+    cIsDown = false,
     sIsDown = false,
-    dIsDown = false;
+    dIsDown = false,
+    eIsDown = false;
+
 
   $(document).keydown(function(e){
     switch(e.which){
@@ -19,6 +23,11 @@ $(function () {
         aIsDown = true;
         socket.emit('keydown', 'left');
         $('.left').addClass('active');
+        break;
+      case 66:
+        if(bIsDown) return;
+        bIsDown = true;
+        socket.emit('keydown', 'active_suspended_user');
         break;
       case 83:
         if(sIsDown) return;
@@ -63,6 +72,4 @@ $(function () {
         break;
     }
   });
-
-
 });

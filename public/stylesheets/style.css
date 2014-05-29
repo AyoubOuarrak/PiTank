@@ -5,7 +5,8 @@ html, body{
 }
 
 body{
-  background:#eee;
+ /*background:#eee;*/
+ background: #fff url(../../images/bg.jpg) repeat top left;
 }
 
 .wrapper{
@@ -21,13 +22,91 @@ body{
 iframe{
   position:absolute;
   top:0;
-  left:-160px;
-  width:640px;
+  left:-170px;
+  width:650px;
   height:480px;
   border:10px solid #333;
   margin:0;
   padding:0;
 }
+
+b{
+  display:block;
+  width:130px;
+  height:90px;
+  background:#222;
+  border-radius:5px;
+  color: #39bfd7;
+  box-shadow: 
+    inset 0 0 50px #333, 
+    0 4px 0 black, 
+    0 2px 0 #222, 
+    0 2px 3px #333;
+  text-align:center;
+  position:absolute;
+  text-shadow:0 -1px 0 black;
+  cursor: pointer;
+  font: bold 19px arial, sans-serif;
+  top:45px;
+  left:320px;
+}
+
+c{
+  display:block;
+  width:130px;
+  height:60px;
+  background:#222;
+  border-radius:5px;
+  color: #39bfd7;
+  box-shadow: 
+    inset 0 0 50px #333, 
+    0 4px 0 black, 
+    0 2px 0 #222, 
+    0 2px 3px #333;
+  text-align:center;
+  position:absolute;
+  text-shadow:0 -1px 0 black;
+  cursor: pointer;
+  font: bold 19px arial, sans-serif;
+  top:158px;
+  left:320px;
+}
+
+d{
+  display:block;
+  width:130px;
+  height:60px;
+  background:#222;
+  border-radius:5px;
+  color: #39bfd7;
+  box-shadow: 
+    inset 0 0 50px #333, 
+    0 4px 0 black, 
+    0 2px 0 #222, 
+    0 2px 3px #333;
+  text-align:center;
+  position:absolute;
+  text-shadow:0 -1px 0 black;
+  cursor: pointer;
+  font: bold 19px arial, sans-serif;
+  top:250px;
+  left:320px;
+}
+
+e{
+  font: bold 25px arial, sans-serif;
+  position:absolute;
+  top:48px;
+  left:1170px;
+}
+
+f{
+  font: bold 25px arial, sans-serif;
+  position:absolute;
+  top:98px;
+  left:1170px;
+}
+
 
 a{
   display:block;

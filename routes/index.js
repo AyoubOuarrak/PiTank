@@ -4,5 +4,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Raspberry Pi Tank' })
+  res.render('index', { title: 'PiTank - Raspberry Pi Tank' })
 };

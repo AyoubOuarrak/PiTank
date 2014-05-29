@@ -40,7 +40,7 @@ app.get('/', routes.index);
 app.listen(3000);
 console.log('Listening %d in %s mode', app.address().port, app.settings.env);
 
-tank.initPins = function(){
+tank.initPins = function() {
   async.parallel([
     gpio.open(_leftMotorFront),
     gpio.open(_leftMotorBack),
@@ -81,22 +81,76 @@ tank.stopAllMotors = function(){
 };
 
 io.sockets.on('connection', function(socket) {
-  
-  socket.on('keydown', function(dir) {
-    switch(dir){
-     case 'up':
-        tank.moveForward();
-        break;
-      case 'down':
-        tank.moveBackward();
-        break;
-      case 'left':
-        tank.turnLeft();
-        break;
-      case 'right':
-        tank.turnRight();
-        break;
+  var pg = require('pg');
+  var conString = "postgres://ayoub:ragnarock@localhost/pi";
+  var user;
+  pg.connect(conString, function(err, client, done) {
+    if(err) {
+      return console.error('error fetching client from pool', err);
     }
+    // last user that make login
+    client.query('SELECT active_email FROM access WHERE date_of_access = (SELECT max(date_of_access) FROM access)', function(err, result) {
+      done();
+      if(err) {
+        return console.error('error running query', err);
+      }
+      user = result.rows[0].active_email;
+    });
+
+    socket.on('keydown', function(dir) {
+      switch(dir){
+       case 'up': {
+          var query = "INSERT INTO command VALUES('move forward', date_trunc('second', current_timestamp), '" + user + "')";
+          client.query(query, function(err, result) {
+            done();
+            if(err) {
+              return console.error('error running query', err);
+            }
+          });
+          tank.moveForward();
+          break;
+        }
+
+        case 'down': {
+          var query = "INSERT INTO command VALUES('move backward', date_trunc('second', current_timestamp), '" + user + "')";
+          client.query(query, function(err, result) {
+            done();
+            if(err) {
+              return console.error('error running query', err);
+            }
+          });
+
+          tank.moveBackward();
+          break;
+        }
+
+        case 'left': {
+          var query = "INSERT INTO command VALUES('move left', date_trunc('second', current_timestamp), '" + user + "')";
+          client.query(query, function(err, result) {
+            done();
+            if(err) {
+              return console.error('error running query', err);
+            }
+          });
+
+          tank.turnLeft();
+          break;
+        }
+
+        case 'right': {
+          var query = "INSERT INTO command VALUES('move right', date_trunc('second', current_timestamp), '" + user + "')";
+          client.query(query, function(err, result) {
+            done();
+            if(err) {
+              return console.error('error running query', err);
+            }
+          });
+
+          tank.turnRight();
+          break;
+        }
+      }
+    });
   });
 
   socket.on('keyup', function(dir){
