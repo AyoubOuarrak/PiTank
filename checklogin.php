@@ -1,7 +1,7 @@
 <?php
     $host="localhost"; 
     $user="ayoub";      
-    $passwd="ragnarock";      
+    $passwd="secret";      
     $db="pi"; 
 
     $dbconn = pg_connect("host=$host dbname=$db user=$user password=$passwd")
