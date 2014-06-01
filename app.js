@@ -89,7 +89,7 @@ io.sockets.on('connection', function(socket) {
       return console.error('error fetching client from pool', err);
     }
     // last user that make login
-    client.query('SELECT active_email FROM access WHERE date_of_access = (SELECT max(date_of_access) FROM access)', function(err, result) {
+    client.query('SELECT * FROM last_user', function(err, result) {
       done();
       if(err) {
         return console.error('error running query', err);

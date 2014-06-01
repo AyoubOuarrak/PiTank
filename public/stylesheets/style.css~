@@ -44,10 +44,10 @@ h1{
 b{
   display:block;
   width:130px;
-  height:90px;
-  background:#0c556a;
+  height:60px;
+  background:#222;
   border-radius:5px;
-  color: #066a75;
+  color: #aaa;
   box-shadow: 
     inset 0 0 50px #333, 
     0 4px 0 black, 
@@ -56,7 +56,10 @@ b{
   text-align:center;
   position:absolute;
   cursor: pointer;
+  font-size: 28x;
+  font: bold 15px/30px arial, sans-serif;
   font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
+  font-weight: bold;
   top:45px;
   left:320px;
 }
@@ -65,15 +68,22 @@ c{
   display:block;
   width:130px;
   height:60px;
-  background:#1a7796;
+  background:#222;
   border-radius:5px;
-  color: #066a75;
-
+  color: #aaa;
+  box-shadow: 
+    inset 0 0 50px #333, 
+    0 4px 0 black, 
+    0 2px 0 #222, 
+    0 2px 3px #333;
   text-align:center;
   position:absolute;
   cursor: pointer;
+  font-size: 28x;
+  font: bold 15px/30px arial, sans-serif;
   font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
-  top:158px;
+  font-weight: bold;
+  top:150px;
   left:320px;
 }
 
@@ -81,13 +91,19 @@ d{
   display:block;
   width:130px;
   height:60px;
-  background:#fff;
+  background:#222;
   border-radius:5px;
-  color: #39bfd7;
-
+  color: #aaa;
+  box-shadow: 
+    inset 0 0 50px #333, 
+    0 4px 0 black, 
+    0 2px 0 #222, 
+    0 2px 3px #333;
   text-align:center;
   position:absolute;
   cursor: pointer;
+  font-size: 28x;
+  font: bold 15px/30px arial, sans-serif;
   font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
   font-weight: bold;
   top:250px;
@@ -115,8 +131,8 @@ f{
 
 a{
   display:block;
-  width:100px;
-  height:100px;
+  width:50px;
+  height:50px;
   background:#222;
   border-radius:5px;
   color:#aaa;

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Loading</title>
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript"> 
+            function sleep(milliseconds) {
+                var start = new Date().getTime();
+                for(var i = 0; i < 1e7; i++) {
+                    if((new Date().getTime() - start) > milliseconds){
+                        break;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Your account is registered <span> you must wait until your account is activated</span></h1>
+            </header>
+            <script type="text/javascript">
+                setTimeout('Redirect()',4000);
+                function Redirect() {
+                    location.href = 'index.html';
+                }
+            </script>
+        </div>
+    </body>
+</html>
