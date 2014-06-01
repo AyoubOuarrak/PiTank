@@ -82,7 +82,7 @@ tank.stopAllMotors = function(){
 
 io.sockets.on('connection', function(socket) {
   var pg = require('pg');
-  var conString = "postgres://ayoub:ragnarock@localhost/pi";
+  var conString = "postgres://ayoub:secret@localhost/pi";
   var user;
   pg.connect(conString, function(err, client, done) {
     if(err) {
