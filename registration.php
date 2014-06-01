@@ -1,7 +1,7 @@
 <?php
     $host="localhost"; 
     $user="ayoub";      
-    $passwd="ragnarock";      
+    $passwd="secret";      
     $db="pi"; 
 
     // Connect to server and select databse.
