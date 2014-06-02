@@ -47,10 +47,7 @@ Copy the files in the conf directory into the raspberry pi, in these directory:
 /etc/network/interface  
 /etc/dhcp/dhcpd.conf  
 /etc/hostapd/hostapd.conf  
-
-#Schema
-![alt tag](https://raw.githubusercontent.com/AyoubOuarrak/PiTank/master/Schematics/schema.png)
-
+ 
 #TODO
  - reading temperature value and humidity 
  - using the ultrasonic sensor to avoid obstacles
