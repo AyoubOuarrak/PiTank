@@ -48,7 +48,7 @@ Copy the files in the conf directory into the raspberry pi, in these directory:
 /etc/dhcp/dhcpd.conf  
 /etc/hostapd/hostapd.conf  
  
- #TODO
+#TODO
  - reading temperature value and humidity 
  - using the ultrasonic sensor to avoid obstacles
  - dhcp server sometimes does not work
